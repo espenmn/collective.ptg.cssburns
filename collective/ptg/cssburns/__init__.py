@@ -72,7 +72,7 @@ class ICssburnsDisplaySettings(IBaseSettings):
             default=u"Padding below imagedescription"),
         default=u"70px")
 
-class CssburnsDisplayType((BaseDisplayType):
+class CssburnsDisplayType(BaseDisplayType):
     name = u"cssburns"
     schema = ICssburnsDisplaySettings
     description = _(u"label_cssburns_display_type",
@@ -85,7 +85,7 @@ class CssburnsDisplayType((BaseDisplayType):
         return u"""
 <style>
 #CSS3Slideshow .img3{
-border: %(batch)ipx solid black;
+border: %(number_of_images)ipx solid black;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="++resource++ptg.cssburns/style.css"/>
