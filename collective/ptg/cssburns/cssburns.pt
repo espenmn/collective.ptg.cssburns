@@ -1,0 +1,13 @@
+<div id="CSS3Slideshow">
+    <tal:images tal:repeat="img view/batch" >
+                
+        <img src=""
+                tal:define="number repeat/img/index; 
+                      theimage img/image_url;
+                      thethumb img/thumb_url;
+                      theclass python:'img' + str(number)"
+                tal:attributes="src img/image_url; class theclass"  
+            />
+ 
+    </tal:images>    
+</div>

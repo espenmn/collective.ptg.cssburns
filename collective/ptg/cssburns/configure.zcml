@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.ptg.cssburns">
+
+    <i18n:registerTranslations directory="locales" />
+
+    <browser:resourceDirectory
+        name="ptg.cssburns"
+        directory="resources"
+        />
+
+    <adapter
+        for="collective.plonetruegallery.interfaces.IGallery"
+        provides=".ICssburnsDisplaySettings"
+        factory=".CssburnsSettings" />
+
+    <browser:page 
+        for="collective.plonetruegallery.interfaces.IGallery"
+        name="galleryview-cssburns"
+        class=".CssburnsDisplayType"
+        template="cssburns.pt"
+        permission="zope2.View" />
+
+    <utility
+        component=".CssburnsDisplayType"
+        provides="collective.plonetruegallery.interfaces.IDisplayType"
+        name="galleryview-cssburns" />
+
+</configure>

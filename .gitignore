@@ -1,0 +1,7 @@
+
+collective.ptg.cssburns.egg-info/
+.DS_Store
+
+*.pyc
+
+*.mo
