@@ -1,5 +1,5 @@
 <div id="CSS3Slideshow">
-    <tal:images tal:repeat="img view/batch" >
+    <tal:images tal:repeat="img view/adapter/cooked_images">
                 
         <img src=""
                 tal:define="number repeat/img/index; 
